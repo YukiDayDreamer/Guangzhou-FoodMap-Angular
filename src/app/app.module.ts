@@ -4,10 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './app-material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MapComponent } from './map/map.component';
 // firebase modules
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -15,10 +11,19 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
+import 'hammerjs';
+
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing';
 
-import 'hammerjs';
 import { FeatureService } from './services/feature.service';
+
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MapComponent } from './pages/map/map.component';
+import { DetailComponent } from './pages/detail/detail.component';
+import { ListComponent } from './pages/list/list.component';
+import { CardComponent } from './components/card/card.component';
 
 // decorator that modifies app modules
 // meta
@@ -27,7 +32,10 @@ import { FeatureService } from './services/feature.service';
     AppComponent,
     MapComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DetailComponent,
+    ListComponent,
+    CardComponent
   ],
   // dependencies
   imports: [

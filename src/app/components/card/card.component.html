@@ -1,0 +1,17 @@
+<div [hidden]="feature || errMess">
+  <mat-spinner [hidden]="feature"></mat-spinner>
+  Loading...
+</div>
+
+<div *ngIf="feature" class="panel" fxLayout="row" fxLayoutWrap fxLayoutAlign="space-around center" (click)="cardClickEvent()">
+  <div class="left-panel" fxFlexOffset="15px" fxFlexAlign="center">
+    <img matListAvatar class="feature-thumbnail" src="{{feature.thumbnail}}">
+  </div>
+  <div class="right-panel" fxFlex fxFlexOffset="15px" fxFlexAlign="center">
+    <div mat-title> {{feature.name}} </div>
+    <div> 推荐度 <i class="fa fa-star fa-fw" *ngFor="let i of Arr(feature.recommendation).fill(1)"></i> </div>
+    <div> 吃撑度 <span *ngFor="let i of Arr(feature.full).fill(1)">🍗</span> </div>
+    <div> <i class="fa fa-tag"></i> {{feature.label}} </div>
+    <div> ￥ {{feature.price}} </div>
+  </div>
+</div>

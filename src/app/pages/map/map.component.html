@@ -1,0 +1,10 @@
+<div id="mapApp" class="container" fxLayout="column">
+  <div id="viewDiv" fxFlex></div>
+  <div *ngIf="featureLoaded"
+    [@cardAnimator]="animationState" 
+    (@cardAnimator.done)="resetAnimationState()"
+    (swipeleft)="swipeAction($event.type)"
+    (swiperight)="swipeAction($event.type)">
+    <app-card [feature]="activeFeature"></app-card>
+  </div>
+</div>

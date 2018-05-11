@@ -1,0 +1,20 @@
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-moredark: #4527A0;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
+
+nav {
+  margin: 0 auto;
+  ul>li {
+    display: inline;
+    cursor: pointer;
+    padding: 0 10px;  
+  }
+}
+
+
+.active {
+  background: $background-moredark;
+}

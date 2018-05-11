@@ -1,0 +1,8 @@
+<div *ngIf="feature" fxLayout="column"
+  [@cardAnimator]="animationState" 
+  (@cardAnimator.done)="resetAnimationState()"
+  (swipeleft)="swipeAction($event.type)"
+  (swiperight)="swipeAction($event.type)">
+  <app-card [feature]="feature"></app-card>
+  <div class="description" [innerHTML]="feature.description"></div>
+</div>

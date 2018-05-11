@@ -1,0 +1,35 @@
+.feature-thumbnail {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: #ddd;
+}
+
+.feature-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.panel {
+  height: 150px;
+  cursor: pointer;
+}
+
+.panel-spacer {
+  padding: 15px;
+}
+
+.left-panel{
+  width: auto;
+}
+
+.right-panel {
+  width: 200px;
+}
+
+.fa.fa-star {
+  color: rgba(255, 0, 0, 0.5);
+}
